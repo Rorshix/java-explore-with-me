@@ -1,13 +1,14 @@
 package ru.practicum;
 
 
+import lombok.experimental.UtilityClass;
 import ru.practicum.dto.HitDto;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-
+@UtilityClass
 public class HitMapper {
 
     public static HitDto returnHitDto(Hit hit) {
