@@ -1,8 +1,8 @@
-package statsservice.server.src.main.resources.java.ru.practicum;
+package ru.practicum;
 
 
-import statsservice.dto.src.main.java.ru.practicum.dto.HitDto;
-import statsservice.dto.src.main.java.ru.practicum.dto.StatsDto;
+import ru.practicum.dto.HitDto;
+import ru.practicum.dto.StatsDto;
 
 import java.time.LocalDateTime;
 import java.util.List;

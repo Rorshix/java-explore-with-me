@@ -1,7 +1,7 @@
-package statsservice.server.src.main.resources.java.ru.practicum;
+package ru.practicum;
 
 
-import statsservice.dto.src.main.java.ru.practicum.dto.HitDto;
+import ru.practicum.dto.HitDto;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

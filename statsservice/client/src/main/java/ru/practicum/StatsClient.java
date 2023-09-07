@@ -1,4 +1,4 @@
-package statsservice.client.src.main.java.ru.practicum;
+package ru.practicum;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.DefaultUriBuilderFactory;
-import statsservice.dto.src.main.java.ru.practicum.dto.HitDto;
+import ru.practicum.dto.HitDto;
 
 import java.util.Map;
 

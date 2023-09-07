@@ -1,4 +1,4 @@
-package statsservice.server.src.main.resources.java.ru.practicum;
+package ru.practicum;
 
 import lombok.*;
 

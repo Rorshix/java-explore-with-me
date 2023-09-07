@@ -1,4 +1,4 @@
-package statsservice.dto.src.main.java.ru.practicum.dto;
+package ru.practicum.dto;
 
 
 import lombok.AllArgsConstructor;

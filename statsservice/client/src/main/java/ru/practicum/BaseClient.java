@@ -1,4 +1,4 @@
-package statsservice.client.src.main.java.ru.practicum;
+package ru.practicum;
 
 import java.util.List;
 import java.util.Map;
