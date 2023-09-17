@@ -43,7 +43,7 @@ public class ErrorHandler {
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.CONFLICT)
-    public Map<String,String>  handleEmailExistException(final ConstraintViolationException e) {
+    public Map<String,String> handleEmailExistException(final ConstraintViolationException e) {
         log.error("Код ошибки:{409}",HttpStatus.CONFLICT,e.getMessage());
         return Map.of("status","CONFLICT",
                 "reason","CONFLICT",
@@ -52,7 +52,10 @@ public class ErrorHandler {
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.CONFLICT)
-    public ErrorResponse handleEmailExistException(final ConflictException e) {
-        return new ErrorResponse(e.getMessage());
+    public Map<String,String> handleEmailExistException(final ConflictException e) {
+        log.error("Код ошибки:{409}",HttpStatus.CONFLICT,e.getMessage());
+        return Map.of("status","CONFLICT",
+                "reason","CONFLICT",
+                "message",e.getMessage());
     }
 }
