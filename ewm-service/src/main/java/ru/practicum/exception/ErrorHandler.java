@@ -25,8 +25,11 @@ public class ErrorHandler {
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse handleThrowable(final ValidationException e) {
-        return new ErrorResponse(e.getMessage());
+    public Map<String,String> handleThrowable(final ValidationException e) {
+        log.error("Код ошибки:{400}",HttpStatus.BAD_REQUEST,e.getMessage());
+        return Map.of("status","BAD_REQUEST",
+                "reason","BAD REQUEST",
+                "message",e.getMessage());
     }
 
     @ExceptionHandler
