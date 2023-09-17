@@ -17,7 +17,7 @@ public class ErrorHandler {
     @ExceptionHandler
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public Map<String,String> handleNotFoundException(final NotFoundException e) {
-        log.error("Код ошибки:{404},{404}",HttpStatus.NOT_FOUND,e.getMessage());
+        log.error("Код ошибки:{404},{201}",HttpStatus.NOT_FOUND,e.getMessage());
         return Map.of("status","NOT_FOUND",
                 "reason","NOT FOUND",
                 "message",e.getMessage());
