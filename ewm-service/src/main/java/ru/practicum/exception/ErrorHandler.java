@@ -34,14 +34,20 @@ public class ErrorHandler {
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse handleThrowable(final MethodArgumentNotValidException e) {
-        return new ErrorResponse(e.getMessage());
+    public Map<String,String> handleThrowable(final MethodArgumentNotValidException e) {
+        log.error("Код ошибки:{400}",HttpStatus.BAD_REQUEST,e.getMessage());
+        return Map.of("status","BAD_REQUEST",
+                "reason","BAD REQUEST",
+                "message",e.getMessage());
     }
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.CONFLICT)
-    public ErrorResponse handleEmailExistException(final ConstraintViolationException e) {
-        return new ErrorResponse(e.getMessage());
+    public Map<String,String>  handleEmailExistException(final ConstraintViolationException e) {
+        log.error("Код ошибки:{409}",HttpStatus.CONFLICT,e.getMessage());
+        return Map.of("status","CONFLICT",
+                "reason","CONFLICT",
+                "message",e.getMessage());
     }
 
     @ExceptionHandler
