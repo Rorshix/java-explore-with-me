@@ -3,6 +3,7 @@ package ru.practicum.category.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.category.CategoryService;
 import ru.practicum.category.dto.CategoryDto;
@@ -19,6 +20,7 @@ public class CategoryPublicController {
 
     private final CategoryService categoryService;
 
+    @Validated
     @GetMapping
     @ResponseStatus(value = HttpStatus.OK)
     public List<CategoryDto> getCategories(@PositiveOrZero @RequestParam(name = "from", defaultValue = "0") Integer from,
