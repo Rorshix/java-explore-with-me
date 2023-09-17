@@ -16,7 +16,7 @@ public class ErrorHandler {
     @ExceptionHandler
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ErrorResponse handleNotFoundException(final NotFoundException e) {
-        String error =String.format("not found exception: %$", e.getMessage());
+        String error = String.format("not found exception: %$", e.getMessage());
         log.info(error);
         return new ErrorResponse(error);
     }
