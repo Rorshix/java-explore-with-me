@@ -79,7 +79,7 @@ public class Event {
     @Enumerated(EnumType.STRING)
     @Column(name = "state")
     State state;
-    @Transient
+
     @Column(name = "views")
     Long views;
 }
