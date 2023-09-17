@@ -13,8 +13,7 @@ import java.time.LocalDateTime;
 
 import static ru.practicum.Util.DATE_FORMAT;
 
-@Getter
-@Setter
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
