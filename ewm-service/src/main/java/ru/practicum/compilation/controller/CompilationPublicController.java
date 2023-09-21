@@ -3,7 +3,6 @@ package ru.practicum.compilation.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import ru.practicum.compilation.CompilationService;
 import ru.practicum.compilation.dto.CompilationDto;
@@ -21,7 +20,6 @@ public class CompilationPublicController {
 
     private final CompilationService compilationService;
 
-    @Validated
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<CompilationDto> getCompilations(@RequestParam(defaultValue = "false", name = "pinned") Boolean pinned,
